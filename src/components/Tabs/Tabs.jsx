@@ -30,7 +30,7 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
         </ul>
       </div>
       <div className="block" data-cy="TabContent">
-        Some text {`${activeTabId}`.slice(4)}
+        {`${tabs.find(tab => tab.id === activTab).content}`}
       </div>
     </div>
   );

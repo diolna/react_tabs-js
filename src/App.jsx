@@ -17,7 +17,9 @@ export const App = () => {
 
   return (
     <div className="section">
-      <h1 className="title">Selected tab is Tab {`${activeTab}`.slice(-1)}</h1>
+      <h1 className="title">
+        Selected tab is {tabs.find(tab => tab.id === activeTab)?.title}
+      </h1>
       <Tabs tabs={tabs} activeTabId={activeTab} onTabSelected={setActiveTab} />
     </div>
   );
